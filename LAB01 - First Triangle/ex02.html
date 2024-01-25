@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script id="vertex-shader" type="x-shader/x-vertex">
+attribute vec4 vPosition;
+void main(){
+  gl_Position = vPosition;
+}
+</script>
+<script id="fragment-shader" type="x-shader/x-fragment">
+precision mediump float;
+void main(){
+    gl_FragColor = vec4( 0.1, 0.1, 0.5, 1.0 );
+}
+</script>
+
+<script type="text/javascript" src="../Common/webgl-utils.js"></script>
+<script type="text/javascript" src="../Common/initShaders.js"></script>
+<script type="text/javascript" src="../Common/MV.js"></script>
+<script type="text/javascript" src="ex02.js"></script>
+</head>
+<body>
+<canvas id="gl-canvas" width="512" height="512">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+<h2>
+Exercicio 2:
+</h2>
+<p>
+LINES: Para cada dois pontos descritos em vertices, cria uma linha entre eles. (1 linha só a cada dois pontos).
+<br>LINE_STRIP: Para cada vértice, desenha uma linha do ponto ao ponto seguinte.
+<br>LINE_LOOP: Para cada vértice, desenha uma linha do ponto ao ponto seguinte, desenhando também a linha entre o último ponto e o primeiro, fechando o loop.
+<br>TRIANGLES: A cada três vértices forma um triângulo. Para 6 vértices, formam-se 2 triângulos.
+<br>TRIANGLE_STRIP: Cada combinação seguida dos três últimos vértices forma um triângulo. Para 6 vértices, formam-se 4 triângulos. 
+<br>TRIANGLE_FAN: Desenha um triângulo do primeiro vértice a cada 2 vértices em ordem do vertices. Para 6 vértices, formam-se 4 triângulos.
+</p>
+
+</body>
+</html>
